@@ -23,4 +23,4 @@ class ProductPage(BasePage):
     def check_basket_position(self):
         position = self.browser.find_element(*ProductPageLocators.POSITION)
         basket_position = self.browser.find_element(*ProductPageLocators.BASKET_POSITION)
-        assert position.text in basket_position.text, "Position/Name wrong"
+        assert position.text == basket_position.text, "Position/Name wrong"
