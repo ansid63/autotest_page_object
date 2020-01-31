@@ -30,3 +30,9 @@ class ProductPage(BasePage):
             "Success message is presented, but should disappeared"
 
 
+    def should_add_goods(self):
+        link = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET)
+        link.click()
+
+
+
